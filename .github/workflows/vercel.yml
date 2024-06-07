@@ -9,6 +9,8 @@ on:
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_NAME: ${{ secrets.NEXT_PUBLIC_NAME }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Vercel CLI
